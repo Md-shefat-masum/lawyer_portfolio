@@ -1,9 +1,342 @@
-header {
-  background-color: gray;
-  padding: 40px 0px;
+body {
+  margin: 0;
+}
+
+div,
+section,
+form,
+ul,
+ol,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
   -webkit-transition-duration: 0.3s;
        -o-transition-duration: 0.3s;
           transition-duration: 0.3s;
+  font-family: "Poppins", sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  font-family: "Playfair Display", serif;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+span,
+i {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  font-family: "Poppins", sans-serif;
+}
+
+header .header_content .logo img {
+  height: 36px;
+}
+header .header_content nav {
+  padding: 32px 0px;
+}
+header .header_content nav ul {
+  gap: 56px;
+}
+header .header_content nav ul li a {
+  color: black;
+}
+header .header_content .search button {
+  border: 0;
+  background: transparent;
+  margin-left: 110px;
+  cursor: pointer;
+}
+header .header_content .search button i {
+  font-size: 18px;
+}
+
+.container {
+  width: 1400px;
+  margin: auto;
+}
+@media screen and (max-width: 575.9px) {
+  .container {
+    width: 95%;
+  }
+}
+@media (min-width: 576px) and (max-width: 768.9px) {
+  .container {
+    width: 576px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.9px) {
+  .container {
+    width: 768px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.9px) {
+  .container {
+    width: 992px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1399.9px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+.container-fluid {
+  width: 95%;
+  margin: auto;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.d-grid {
+  display: grid;
+}
+
+.flex-1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.justify-content-flex-start {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.justify-content-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.justify-content-flex-end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.justify-content-space-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.justify-content-space-evenly {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.justify-content-space-around {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.justify-items-flex-start {
+  justify-items: flex-start;
+}
+
+.justify-items-center {
+  justify-items: center;
+}
+
+.justify-items-flex-end {
+  justify-items: flex-end;
+}
+
+.justify-items-space-between {
+  justify-items: space-between;
+}
+
+.justify-items-space-evenly {
+  justify-items: space-evenly;
+}
+
+.justify-items-space-around {
+  justify-items: space-around;
+}
+
+.align-content-flex-start {
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+
+.align-content-center {
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.align-content-flex-end {
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+}
+
+.align-content-space-between {
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+.align-content-space-evenly {
+  -ms-flex-line-pack: space-evenly;
+      align-content: space-evenly;
+}
+
+.align-content-space-around {
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+.align-items-flex-start {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.align-items-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.align-items-flex-end {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.align-items-space-between {
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+}
+
+.align-items-space-evenly {
+  -webkit-box-align: space-evenly;
+      -ms-flex-align: space-evenly;
+          align-items: space-evenly;
+}
+
+.align-items-space-around {
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+}
+
+.gap-10px {
+  gap: 10px;
+}
+
+.gap-15px {
+  gap: 15px;
+}
+
+.gap-20px {
+  gap: 20px;
+}
+
+.gap-25px {
+  gap: 25px;
+}
+
+.gap-30px {
+  gap: 30px;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+#banner .banner_content {
+  background-image: url("../images/banner.png");
+  background-position: bottom right;
+  padding-top: 150px;
+  padding-bottom: 46px;
+}
+#banner .banner_content .content_top {
+  width: 60%;
+}
+#banner .banner_content .content_top h1 {
+  font-weight: 700;
+  font-size: 90px;
+  letter-spacing: 0.02em;
+  color: #05546D;
+}
+#banner .banner_content .content_top p {
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: 0.5px;
+  color: #4F4F4F;
+  margin-top: 46px;
+  margin-bottom: 42px;
+}
+#banner .banner_content .content_top a {
+  padding: 29px 36px;
+  background: #094B72;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  letter-spacing: 0.08em;
+}
+#banner .content_bottom {
+  width: 60%;
+  margin-top: 115px;
+}
+#banner .content_bottom h4 {
+  font-size: 22px;
+  letter-spacing: 0.04em;
+  color: #4F4F4F;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  margin-bottom: 34px;
+}
+#banner .content_bottom ul {
+  display: grid;
+  grid-gap: 20px;
+  gap: 20px;
+  grid-template-columns: 125px 125px;
+}
+#banner .content_bottom ul li a img {
+  height: 28px;
+}
 /*# sourceMappingURL=style.css.map */

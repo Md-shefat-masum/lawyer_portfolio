@@ -3,7 +3,34 @@
 @import "../mixins/responsive";
 
 header{
-    background-color: gray;
-    padding: 40px 0px;
-    @include tr();
+    .header_content{
+        .logo{
+            img{
+                height: 36px;
+            }
+        }
+        nav{
+            // border: $border;
+            padding: 32px 0px;
+            ul{
+                gap: 56px;
+                li{
+                    a{
+                        color: $black;
+                    }
+                }
+            }
+        }
+        .search{
+            button{
+                border: 0;
+                background: transparent;
+                margin-left: 110px;
+                cursor: pointer;
+                i{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
 }
