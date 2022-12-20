@@ -1,0 +1,28 @@
+{
+  "name": "figma_to_html",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postcss": "postcss assets/styles/style.css -o assets/styles/style.css -w",
+    "sass": "sass assets/scss/style.scss assets/styles/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Md-shefat-masum/lawyer_portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Md-shefat-masum/lawyer_portfolio/issues"
+  },
+  "homepage": "https://github.com/Md-shefat-masum/lawyer_portfolio#readme",
+  "devDependencies": {
+    "postcss": "^8.4.20",
+    "postcss-cli": "^10.1.0",
+    "postcss-preset-env": "^7.8.3",
+    "sass": "^1.57.0"
+  }
+}
