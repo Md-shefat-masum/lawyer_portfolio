@@ -2,6 +2,12 @@ body {
   margin: 0;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 div,
 section,
 form,
@@ -65,17 +71,83 @@ header .header_content .logo img {
 header .header_content nav {
   padding: 32px 0px;
 }
+@media (min-width: 0px) and (max-width: 767px) {
+  header .header_content nav {
+    position: relative;
+    padding: 10px 0px;
+  }
+}
+header .header_content nav .nav_toggle_btn {
+  display: none;
+  border: none;
+  background-color: #05546D;
+  color: white;
+  padding: 10px;
+  float: right;
+  border-radius: 3px;
+}
+header .header_content nav .nav_toggle_btn:hover {
+  background-color: #0F6E8C;
+}
+@media (min-width: 0px) and (max-width: 767px) {
+  header .header_content nav .nav_toggle_btn {
+    display: block;
+  }
+}
 header .header_content nav ul {
   gap: 56px;
 }
+@media (min-width: 0px) and (max-width: 767.9px) {
+  header .header_content nav ul {
+    position: absolute;
+    top: 100%;
+    right: -100vw;
+    background-color: #05546D;
+    height: calc(100vh - 67px);
+    width: 70vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 20px;
+    z-index: 999999;
+  }
+  header .header_content nav ul.active {
+    right: -50px;
+  }
+}
+header .header_content nav ul li.close_nav {
+  display: none;
+}
+@media (min-width: 0px) and (max-width: 767.9px) {
+  header .header_content nav ul li.close_nav {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+}
 header .header_content nav ul li a {
   color: black;
+}
+@media (min-width: 0px) and (max-width: 767.9px) {
+  header .header_content nav ul li a {
+    color: white;
+  }
 }
 header .header_content .search button {
   border: 0;
   background: transparent;
   margin-left: 110px;
   cursor: pointer;
+}
+@media (min-width: 0px) and (max-width: 767.9px) {
+  header .header_content .search button {
+    margin-left: 10px;
+  }
 }
 header .header_content .search button i {
   font-size: 18px;
@@ -287,20 +359,49 @@ header .header_content .search button i {
   width: 100%;
 }
 
+.d-none {
+  display: none;
+}
+
 #banner .banner_content {
   background-image: url("../images/banner.png");
   background-position: bottom right;
   padding-top: 150px;
   padding-bottom: 46px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 0px) and (max-width: 767.9px) {
+  #banner .banner_content {
+    background-image: none;
+    background-image: initial;
+    padding-top: 40px;
+  }
 }
 #banner .banner_content .content_top {
   width: 60%;
+}
+@media (min-width: 0px) and (max-width: 767.9px) {
+  #banner .banner_content .content_top {
+    width: auto;
+    width: initial;
+  }
 }
 #banner .banner_content .content_top h1 {
   font-weight: 700;
   font-size: 90px;
   letter-spacing: 0.02em;
   color: #05546D;
+}
+@media screen and (max-width: 575.9px) {
+  #banner .banner_content .content_top h1 {
+    font-size: 30px;
+  }
+}
+@media (min-width: 576px) and (max-width: 768.9px) {
+  #banner .banner_content .content_top h1 {
+    font-size: 30px;
+  }
 }
 #banner .banner_content .content_top p {
   font-weight: 500;
@@ -310,6 +411,20 @@ header .header_content .search button i {
   margin-top: 46px;
   margin-bottom: 42px;
 }
+@media screen and (max-width: 575.9px) {
+  #banner .banner_content .content_top p {
+    font-size: 16px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 576px) and (max-width: 768.9px) {
+  #banner .banner_content .content_top p {
+    font-size: 16px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+}
 #banner .banner_content .content_top a {
   padding: 29px 36px;
   background: #094B72;
@@ -318,9 +433,26 @@ header .header_content .search button i {
   font-size: 16px;
   letter-spacing: 0.08em;
 }
+@media screen and (max-width: 575.9px) {
+  #banner .banner_content .content_top a {
+    padding: 16px 30px;
+  }
+}
+@media (min-width: 576px) and (max-width: 768.9px) {
+  #banner .banner_content .content_top a {
+    padding: 16px 30px;
+  }
+}
 #banner .content_bottom {
   width: 60%;
   margin-top: 115px;
+}
+@media screen and (max-width: 575.9px) {
+  #banner .content_bottom {
+    margin-top: 40px;
+    width: auto;
+    width: initial;
+  }
 }
 #banner .content_bottom h4 {
   font-size: 22px;
@@ -338,5 +470,81 @@ header .header_content .search button i {
 }
 #banner .content_bottom ul li a img {
   height: 28px;
+}
+
+#services {
+  background: #F2FCFF;
+}
+#services .service_content {
+  display: grid;
+  grid-template-columns: 419px 1fr;
+  grid-gap: 52px;
+  gap: 52px;
+  padding: 126px 0px;
+}
+@media screen and (max-width: 575.9px) {
+  #services .service_content {
+    padding: 40px 0px;
+    display: block;
+  }
+}
+#services .service_content .service_description {
+  padding-top: 48px;
+}
+@media screen and (max-width: 575.9px) {
+  #services .service_content .service_description {
+    padding: 0px;
+  }
+}
+#services .service_content .service_description h2 {
+  font-size: 48px;
+  line-height: 64px;
+  letter-spacing: 0.323077px;
+}
+@media screen and (max-width: 575.9px) {
+  #services .service_content .service_description h2 {
+    font-size: 30px;
+    line-height: 45px;
+  }
+}
+#services .service_content .service_description p {
+  font-size: 20px;
+  line-height: 36px;
+  letter-spacing: 0.5px;
+  color: #4F4F4F;
+  margin-top: 30px;
+}
+#services .service_content .service_items {
+  display: grid;
+  grid-template-columns: 256px 256px;
+  grid-gap: 30px;
+  gap: 30px;
+}
+@media screen and (max-width: 575.9px) {
+  #services .service_content .service_items {
+    grid-template-columns: 100%;
+    margin-top: 50px;
+  }
+}
+#services .service_content .service_items .item {
+  background-color: white;
+  border-radius: 8px;
+  padding: 24px;
+}
+#services .service_content .service_items .item .icon img {
+  height: 37px;
+}
+#services .service_content .service_items .item h3 {
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+#services .service_content .service_items .item p {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  color: #4F4F4F;
 }
 /*# sourceMappingURL=style.css.map */

@@ -2,32 +2,94 @@
 @import "../mixins/common";
 @import "../mixins/responsive";
 
-header{
-    .header_content{
-        .logo{
-            img{
+header {
+    .header_content {
+        .logo {
+            img {
                 height: 36px;
             }
         }
-        nav{
+
+        nav {
             // border: $border;
             padding: 32px 0px;
-            ul{
+
+            @include custom_responsive(0px, 767px) {
+                position: relative;
+                padding: 10px 0px;
+            }
+
+            .nav_toggle_btn {
+                display: none;
+                border: none;
+                background-color: $brand_deep;
+                color: $white;
+                padding: 10px;
+                float: right;
+                border-radius: 3px;
+
+                &:hover {
+                    background-color: $brand_light;
+                }
+
+                @include custom_responsive(0px, 767px) {
+                    display: block;
+                }
+            }
+
+            ul {
                 gap: 56px;
-                li{
-                    a{
+
+                @include custom_responsive(0px, 767.9px) {
+                    position: absolute;
+                    top: 100%;
+                    right: -100vw;
+                    background-color: $brand_deep;
+                    height: calc(100vh - 67px);
+                    width: 70vw;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 20px;
+                    z-index: 999999;
+
+                    &.active{
+                        right: -50px;
+                    }
+                }
+
+                li {
+                    &.close_nav{
+                        display: none;
+                        @include custom_responsive(0px, 767.9px) {
+                            display: block;
+                            position: absolute;
+                            right: 20px;
+                            top: 20px;
+                        }
+                    }
+                    a {
                         color: $black;
+
+                        @include custom_responsive(0px, 767.9px) {
+                            color: $white;
+                        }
                     }
                 }
             }
         }
-        .search{
-            button{
+
+        .search {
+            button {
                 border: 0;
                 background: transparent;
                 margin-left: 110px;
                 cursor: pointer;
-                i{
+
+                @include custom_responsive(0px, 767.9px) {
+                    margin-left: 10px;
+                }
+
+                i {
                     font-size: 18px;
                 }
             }

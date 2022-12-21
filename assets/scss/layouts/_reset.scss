@@ -1,8 +1,14 @@
-@import "../abstracts/variables"; 
+@import "../abstracts/variables";
 @import "../mixins/common";
 
 body {
     margin: 0;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 div,
